@@ -891,7 +891,7 @@ strategy:
 
 ### **`jobs.<job_id>.continue-on-error`**
 
-Prevents a workflow run from failing when a job fails. Set to `true` to allow a workflow run to pass when this job fails.
+Prevents a workflow run from failing when a job fails. Set to `true` to allow a workflow run to pass when this job fails.  The pass/fail indicator for the push/pull-request event that triggered the run is not affected by this setting, as it is based on whether all jobs pass.  Hence, it is not equivalent to the 'allow-failure' setting available in other CI systems.
 
 #### Example preventing a specific failing matrix job from failing a workflow run
 
